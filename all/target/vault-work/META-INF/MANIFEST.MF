@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Created-By: Apache Jackrabbit FileVault - Package Maven Plugin 1.1.6
+Build-Jdk-Spec: 11
+Implementation-Title: MS Demo - All
+Implementation-Version: 0.0.1-SNAPSHOT
+Content-Package-Type: container
+Content-Package-Id: com.ms.demo.aem:ms-demo-aem-project.all:0.0.1-SNAPSH
+ OT
+Content-Package-Description: All content package for MS Demo
+Content-Package-Roots: /apps/msDemo-packages,/apps/msDemo-vendor-package
+ s
+
