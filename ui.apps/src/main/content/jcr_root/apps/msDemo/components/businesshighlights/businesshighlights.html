@@ -1,0 +1,21 @@
+<div
+	data-sly-use.business="${'com.ms.demo.aem.core.models.BusinessHighlights' @ rAttribute='TestAttribute'}"
+	data-sly-use.templates="core/wcm/components/commons/v1/templates.html"></div>
+
+    <div><img src="${properties.image }" alt="img"/>
+
+    <div>${properties.heading}</div>
+
+
+
+    <div data-sly-list="${business.businessHighlightsDetails}">
+	<p>
+		<b>${item.serialNumber} </b>
+	</p>
+	<p>
+		<b>${item.highlightsdesc}</b>
+	</p>
+</div>
+
+<sly
+	data-sly-call="${templates.placeholder @ isEmpty = !sol.challengeDetail}"></sly>
