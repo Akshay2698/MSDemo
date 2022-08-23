@@ -15,15 +15,17 @@ Export-Package: com.ms.demo.aem.core.filters;version="1.0";uses:="java
  sling.api,org.apache.sling.api.servlets"
 Import-Package: javax.annotation;version="0.0.0",com.day.cq.wcm.api;ve
  rsion="[1.27,2)",com.ms.demo.aem.core.filters;version="[1.0,2)",com.m
- s.demo.aem.core.listeners;version="[1.0,2)",com.ms.demo.aem.core.sche
- dulers;version="[1.0,2)",com.ms.demo.aem.core.servlets;version="[1.0,
- 2)",javax.servlet;version="[3.1,4)",org.apache.sling.api;version="[2.
- 3,3)",org.apache.sling.api.request;version="[2.4,3)",org.apache.sling
- .api.resource;version="[2.11,3)",org.apache.sling.api.resource.observ
- ation;version="[1.2,2)",org.apache.sling.api.servlets;version="[2.3,3
- )",org.apache.sling.models.annotations;version="[1.5,2)",org.apache.s
- ling.models.annotations.injectorspecific;version="[1.1,2)",org.slf4j;
- version="[1.7,2)"
+ s.demo.aem.core.listeners;version="[1.0,2)",com.ms.demo.aem.core.mode
+ ls;version="[1.0,2)",com.ms.demo.aem.core.schedulers;version="[1.0,2)
+ ",com.ms.demo.aem.core.servlets;version="[1.0,2)",javax.inject;versio
+ n="[1.0,2)",javax.servlet;version="[3.1,4)",org.apache.sling.api;vers
+ ion="[2.3,3)",org.apache.sling.api.request;version="[2.4,3)",org.apac
+ he.sling.api.resource;version="[2.11,3)",org.apache.sling.api.resourc
+ e.observation;version="[1.2,2)",org.apache.sling.api.servlets;version
+ ="[2.3,3)",org.apache.sling.models.annotations;version="[1.5,2)",org.
+ apache.sling.models.annotations.injectorspecific;version="[1.1,2)",or
+ g.slf4j;version="[1.7,2)"
+Private-Package: com.ms.demo.aem.core.models.Impl
 Provide-Capability: osgi.service;objectClass:List<String>="java.lang.R
  unnable",osgi.service;objectClass:List<String>="javax.servlet.Filter"
  ;uses:="javax.servlet",osgi.service;objectClass:List<String>="javax.s
@@ -32,10 +34,13 @@ Provide-Capability: osgi.service;objectClass:List<String>="java.lang.R
  ner";uses:="org.apache.sling.api.resource.observation"
 Require-Capability: osgi.extender;filter:="(&(osgi.extender=osgi.compo
  nent)(version>=1.4.0)(!(version>=2.0.0)))",osgi.ee;filter:="(&(osgi.e
- e=JavaSE)(version=1.8))"
+ e=JavaSE)(version=11))"
 Service-Component: OSGI-INF/com.ms.demo.aem.core.filters.LoggingFilter
  .xml,OSGI-INF/com.ms.demo.aem.core.listeners.SimpleResourceListener.x
  ml,OSGI-INF/com.ms.demo.aem.core.schedulers.SimpleScheduledTask.xml,O
  SGI-INF/com.ms.demo.aem.core.servlets.SimpleServlet.xml
-Sling-Model-Classes: com.ms.demo.aem.core.models.HelloWorldModel
+Sling-Model-Classes: com.ms.demo.aem.core.models.BusinessHighlightsPoj
+ o,com.ms.demo.aem.core.models.HelloWorldModel,com.ms.demo.aem.core.mo
+ dels.Impl.BusinessHighlightsImpl,com.ms.demo.aem.core.models.Impl.Col
+ umnControlImpl
 
